@@ -1,7 +1,7 @@
 import React from 'react';
 import ReservationsCard from '../ReservationsCard/ReservationsCard';
 
-const ReservationsContainer = ({ reservations }) => {
+const ReservationsContainer = ({ reservations, fetchWithDelete }) => {
   return reservations.map(reservation => (
     <ReservationsCard
       key={reservation.id}
@@ -9,6 +9,8 @@ const ReservationsContainer = ({ reservations }) => {
       date={reservation.date}
       time={reservation.time}
       numberOfGuests={reservation.number}
+      id={reservation.id}
+      fetchWithDelete={fetchWithDelete}
     />
   ));
 };

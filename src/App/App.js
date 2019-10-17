@@ -36,6 +36,20 @@ class App extends Component {
       .catch(error => console.log(error));
   };
 
+  fetchWithDelete = id => {
+    fetch(`http://localhost:3001/api/v1/reservations/${id}`, {
+      method: 'DELETE'
+    })
+      .then(response => response.json())
+      .then(data => {
+        const filteredReservations = this.state.reservations.filter(
+          x => x.id !== id
+        );
+        this.setState({ reservations: filteredReservations });
+      })
+      .catch(error => console.log(error));
+  };
+
   // ! deprecated with the use of fetchWithPost function above
   // Todo: write new test
   addReservation = newReservation => {
@@ -52,7 +66,10 @@ class App extends Component {
         <FormInput addReservation={this.fetchWithPost} />
         <div className='resy-form'></div>
         <div className='resy-container'>
-          <ReservationsContainer reservations={this.state.reservations} />
+          <ReservationsContainer
+            reservations={this.state.reservations}
+            fetchWithDelete={this.fetchWithDelete}
+          />
         </div>
       </div>
     );
