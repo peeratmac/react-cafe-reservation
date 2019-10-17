@@ -22,4 +22,19 @@ describe('FORMINPUT', () => {
 
     expect(wrapper.state('name')).toEqual(expected);
   });
+
+  it('should run handleAddReservation when the button is clicked to submit a new reservation', () => {
+    wrapper.instance().handleAddReservation = jest.fn();
+    wrapper.instance().forceUpdate();
+    const mockEvent = { preventDefault: jest.fn() };
+
+    wrapper
+      .find('button')
+      .at(0)
+      .simulate('click', mockEvent);
+
+    expect(wrapper.instance().handleAddReservation).toHaveBeenCalledWith(
+      mockEvent
+    );
+  });
 });
