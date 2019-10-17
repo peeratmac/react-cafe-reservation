@@ -19,6 +19,7 @@ class FormInput extends Component {
     };
     console.log(this.props);
     this.props.addReservation(newReservation);
+    this.clearInputs();
   };
 
   clearInputs = () => {
