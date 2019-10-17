@@ -11,6 +11,24 @@ class FormInput extends Component {
     };
   }
 
+  handleAddReservation = event => {
+    event.preventDefault();
+    const newReservation = {
+      id: Date.now(),
+      ...this.state
+    };
+    console.log(this.props);
+    this.props.addReservation(newReservation);
+  };
+
+  clearInputs = () => {
+    this.setState({ guestName: '', date: '', time: '', numberOfGuests: '' });
+  };
+
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
   render() {
     return (
       <form>
@@ -19,7 +37,7 @@ class FormInput extends Component {
           placeholder='Guest Name'
           name='guestName'
           value={this.state.guestName}
-          onChange={() => {}}
+          onChange={event => this.handleChange(event)}
         />
 
         <input
@@ -27,7 +45,7 @@ class FormInput extends Component {
           placeholder='Date X/XX or XX/XX'
           name='date'
           value={this.state.date}
-          onChange={() => {}}
+          onChange={event => this.handleChange(event)}
         />
 
         <input
@@ -35,7 +53,7 @@ class FormInput extends Component {
           placeholder='Time X:XX am/pm'
           name='time'
           value={this.state.time}
-          onChange={() => {}}
+          onChange={event => this.handleChange(event)}
         />
 
         <input
@@ -43,7 +61,7 @@ class FormInput extends Component {
           placeholder='Number of Guests'
           name='numberOfGuests'
           value={this.state.numberOfGuests}
-          onChange={() => {}}
+          onChange={event => this.handleChange(event)}
         />
       </form>
     );
