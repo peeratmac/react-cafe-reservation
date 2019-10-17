@@ -19,6 +19,7 @@ exports[`APP should match App Snapshot 1`] = `
     className="resy-container"
   >
     <ReservationsContainer
+      fetchWithDelete={[Function]}
       reservations={Array []}
     />
   </div>
