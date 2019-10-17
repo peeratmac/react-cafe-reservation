@@ -19,28 +19,32 @@ class FormInput extends Component {
           placeholder='Guest Name'
           name='guestName'
           value={this.state.guestName}
-          onChange={} />
+          onChange={() => {}}
+        />
 
-          <input
+        <input
           type='text'
           placeholder='Date X/XX or XX/XX'
           name='date'
           value={this.state.date}
-          onChange={} />
+          onChange={() => {}}
+        />
 
-          <input
+        <input
           type='text'
           placeholder='Time X:XX am/pm'
           name='time'
           value={this.state.time}
-          onChange={} />
+          onChange={() => {}}
+        />
 
-          <input
+        <input
           type='text'
           placeholder='Number of Guests'
           name='numberOfGuests'
           value={this.state.numberOfGuests}
-          onChange={} />
+          onChange={() => {}}
+        />
       </form>
     );
   }

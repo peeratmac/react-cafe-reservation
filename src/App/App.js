@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ReservationsContainer from '../ReservationsContainer/ReservationsContainer';
+import FormInput from '../FormInput/FormInput';
 
 class App extends Component {
   constructor() {
