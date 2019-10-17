@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RESERVATIONS CONTAINER should match ReservationsContainer Snapshot 1`] = `
+<ReservationsCard
+  date="12/25"
+  guestName="Peerat"
+  numberOfGuests="555"
+  time="8:00"
+/>
+`;
