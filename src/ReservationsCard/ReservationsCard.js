@@ -1,13 +1,13 @@
 import React from 'react';
 
 const ReservationsCard = props => {
-  const { id, guestName, date, time, numberOfGuests } = props;
+  const { guestName, date, time, numberOfGuests } = props;
   return (
     <div>
-      <h3>{guestName}</h3>
-      <p>{date}</p>
-      <p>{time}</p>
-      <p>Number of guests: {numberOfGuests}</p>
+      <h1>{guestName}</h1>
+      <h2>{date}</h2>
+      <h2>{time}</h2>
+      <h2>Number of guests: {numberOfGuests}</h2>
       <button>Cancel</button>
     </div>
   );
