@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ReservationsContainer from './ReservationsContainer';
 import { shallow } from 'enzyme';
 

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FORMINPUT should match FormInput Snapshot 1`] = `
+<form>
+  <input
+    name="name"
+    onChange={[Function]}
+    placeholder="Guest Name"
+    type="text"
+    value=""
+  />
+  <input
+    name="date"
+    onChange={[Function]}
+    placeholder="Date X/XX or XX/XX"
+    type="text"
+    value=""
+  />
+  <input
+    name="time"
+    onChange={[Function]}
+    placeholder="Time X:XX"
+    type="text"
+    value=""
+  />
+  <input
+    name="number"
+    onChange={[Function]}
+    placeholder="Number of Guests"
+    type="text"
+    value=""
+  />
+  <button
+    onClick={[Function]}
+  >
+    SUBMIT
+  </button>
+</form>
+`;
