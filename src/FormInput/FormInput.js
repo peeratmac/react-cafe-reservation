@@ -14,9 +14,9 @@ class FormInput extends Component {
   handleAddReservation = event => {
     event.preventDefault();
     const newReservation = {
-      id: Date.now(),
       ...this.state
     };
+    console.log(newReservation);
     console.log(this.props);
     this.props.addReservation(newReservation);
     this.clearInputs();
